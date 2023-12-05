@@ -1,0 +1,60 @@
+api:
+  version: 1
+spring:
+  application:
+    name: feito-a-mao-api
+  flyway:
+    url: jdbc:postgresql://localhost:11000/FEITO_A_MAO
+    user: postgres
+    password: postgres
+    schemas: FEITO_A_MAO
+    baselineOnMigrate: true
+  datasource:
+    url: jdbc:postgresql://localhost:11000/FEITO_A_MAO?currentSchema=FEITO_A_MAO
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+      show-sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+server:
+  port: 8070
+  max-http-header-size: 10MB
+  servlet:
+    context-path: /api/v1
+management:
+  server:
+    port: 8071
+  endpoints:
+    web:
+      base-path: /
+logging:
+  level:
+    root: ${LOG_LEVEL:INFO}
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /api-docs
+restricoes:
+  sso:
+    url: ${SSO_INTERNO_URL}
+    grantType: ${SSO_INTERNO_TYPE}
+    clientId: ${CLIENT_ID}
+    clientSecret: ${SSO_CLIENT_SECRET}
+    username: ${SSO_INTERNO_USERNAME}
+    password: ${SSO_INTERNO_PASSWORD}
+    ambiente: ${SSO_AMBIENTE}
+keycloak:
+  ssl-required: external
+  realm: fam # realm
+  resource: feito-a-mao-api # artifactId
+  auth-server-url: http://localhost:8080/auth # url do sso
+  bearer-only: true
+  confidential-port: 0
+  use-resource-role-mappings: true
