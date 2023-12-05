@@ -17,12 +17,13 @@ Feito à Mão é uma plataforma dedicada a artesãos, onde podem listar e vender
 ## Configuração do Banco de Dados
 - Certifique-se de ter um servidor PostgreSQL em execução.
 - Crie um banco de dados chamado `FEITO_A_MAO`.
-- Configure as credenciais nos arquivos `application.yml` e `flyway.properties`  ou por meio de variáveis de ambiente.
+- Configure as credenciais nos arquivos `application.yml` e `flyway.properties`.
 
 ## Configuração do Projeto
 1. Compile o projeto: `mvn clean install`
 
 ## Execução da Aplicação
-Execute o seguinte comando no diretório do projeto:
+Execute o seguinte comando no diretório do projeto para iniciar a aplicação:
+
 ```bash
-java -jar target/feito-a-mao.jar
+mvn spring-boot:run
