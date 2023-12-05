@@ -6,7 +6,7 @@
 ## Configuração do Banco de Dados
 - Certifique-se de ter um servidor PostgreSQL em execução.
 - Crie um banco de dados chamado `FEITO_A_MAO`.
-- Configure as credenciais nos arquivos `application.yml` e `flyway.properties`.
+- Configure as credenciais no arquivo `application.yml`.
 
 ## Configuração do Projeto
 1. Compile o projeto: `mvn clean install`
