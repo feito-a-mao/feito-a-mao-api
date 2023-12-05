@@ -1,14 +1,3 @@
-# Feito à Mão - Plataforma para Artesãos
-
-## Descrição
-Feito à Mão é uma plataforma dedicada a artesãos, onde podem listar e vender seus produtos exclusivos. Esta aplicação fornece uma maneira fácil e eficaz para conectar artesãos a potenciais compradores.
-
-## Funcionalidades Principais
-- Cadastro de artesãos e produtos.
-- Listagem de produtos para venda.
-- Avaliação e comentários dos produtos.
-- Gerenciamento de perfil para cada artesão.
-
 ## Pré-requisitos
 - Java 8
 - PostgreSQL
