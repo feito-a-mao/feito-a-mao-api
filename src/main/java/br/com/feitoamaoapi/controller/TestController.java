@@ -1,4 +1,4 @@
-package br.com.banestes.feitoamaoapi.controller;
+package br.com.feitoamaoapi.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

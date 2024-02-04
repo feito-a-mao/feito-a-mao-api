@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import br.com.banestes.feitoamaoapi.config.CorsConfig;
+import br.com.feitoamaoapi.config.CorsConfig;
 
 public class CorsConfigTest {
 

@@ -1,9 +1,9 @@
-package br.com.banestes.feitoamao.application;
+package br.com.banestes.application;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
-import br.com.banestes.feitoamaoapi.FeitoAMaoApiApplication;
+import br.com.feitoamaoapi.FeitoAMaoApiApplication;
 
 public class ApplicationTest {
 

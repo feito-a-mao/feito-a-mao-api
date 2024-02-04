@@ -7,10 +7,10 @@ spring:
     url: jdbc:postgresql://localhost:11000/FEITO_A_MAO
     user: postgres
     password: postgres
-    schemas: FEITO_A_MAO
+    schemas: feito_a_mao
     baselineOnMigrate: true
   datasource:
-    url: jdbc:postgresql://localhost:11000/FEITO_A_MAO?currentSchema=FEITO_A_MAO
+    url: jdbc:postgresql://localhost:11000/FEITO_A_MAO
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver

@@ -1,4 +1,4 @@
-package br.com.banestes.feitoamaoapi.infra.util;
+package br.com.feitoamaoapi.infra.util;
 
 import java.util.regex.Pattern;
 

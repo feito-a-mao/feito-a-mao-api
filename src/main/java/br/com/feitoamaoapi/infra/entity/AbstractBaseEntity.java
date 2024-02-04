@@ -1,4 +1,4 @@
-package br.com.banestes.feitoamaoapi.infra.entity;
+package br.com.feitoamaoapi.infra.entity;
 
 import javax.persistence.MappedSuperclass;
 

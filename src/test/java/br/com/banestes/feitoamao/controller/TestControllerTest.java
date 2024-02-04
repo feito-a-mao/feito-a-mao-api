@@ -14,7 +14,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import br.com.banestes.feitoamaoapi.controller.TestController;
+import br.com.feitoamaoapi.controller.TestController;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(TestController.class)

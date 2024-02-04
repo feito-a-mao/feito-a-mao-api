@@ -1,4 +1,4 @@
-package br.com.banestes.feitoamaoapi.infra.dto;
+package br.com.feitoamaoapi.infra.dto;
 
 import java.util.List;
 

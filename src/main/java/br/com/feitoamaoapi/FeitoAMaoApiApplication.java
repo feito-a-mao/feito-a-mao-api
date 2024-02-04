@@ -1,4 +1,4 @@
-package br.com.banestes.feitoamaoapi;
+package br.com.feitoamaoapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

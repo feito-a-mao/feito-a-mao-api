@@ -1,4 +1,4 @@
-package br.com.banestes.feitoamaoapi.config;
+package br.com.feitoamaoapi.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
