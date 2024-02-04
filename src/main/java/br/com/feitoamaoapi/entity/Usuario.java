@@ -13,12 +13,16 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import br.com.feitoamaoapi.infra.entity.AbstractBaseEntity;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "usuario", schema = "FEITO_A_MAO")
 public class Usuario extends AbstractBaseEntity<Long> {
 

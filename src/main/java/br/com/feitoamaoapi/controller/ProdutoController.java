@@ -7,27 +7,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.feitoamaoapi.dto.VendedorDTO;
-import br.com.feitoamaoapi.dto.VendedorParameters;
+import br.com.feitoamaoapi.dto.ProdutoDTO;
+import br.com.feitoamaoapi.dto.ProdutoParameters;
 import br.com.feitoamaoapi.infra.dto.PaginaDTO;
-import br.com.feitoamaoapi.service.VendedorService;
+import br.com.feitoamaoapi.service.ProdutoService;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 @RestController
-@RequestMapping("/vendedor")
-public class VendedorController {
+@RequestMapping("/produto")
+public class ProdutoController {
 
 	@Autowired
-	private VendedorService vendedorService;
+	private ProdutoService produtoService;
 
 	@GetMapping("")
-	public PaginaDTO<VendedorDTO> listar(@ModelAttribute VendedorParameters parameters,
+	public PaginaDTO<ProdutoDTO> listar(@ModelAttribute ProdutoParameters parameters,
 			@RequestParam(required = false, defaultValue = "0") Integer offset,
 			@RequestParam(required = false, defaultValue = "10") Integer limit,
 			@RequestParam(required = false) String sort) {
-		return vendedorService.recuperarTodos(parameters, offset, limit, sort);
+		return produtoService.recuperarTodos(parameters, offset, limit, sort);
 	}
 }

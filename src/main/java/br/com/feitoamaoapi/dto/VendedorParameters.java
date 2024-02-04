@@ -12,14 +12,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true, onlyExplicitlyIncluded = true)
-public class ImagemDTO extends BaseDTO {
-	private Long id;
+public class VendedorParameters extends BaseDTO {
 
-	private String nomeArquivo;
+	private String nomeVendedor;
 
-	private byte[] dadosImagem;
-
-	private String legenda;
-
-	private String dataUpload;
 }

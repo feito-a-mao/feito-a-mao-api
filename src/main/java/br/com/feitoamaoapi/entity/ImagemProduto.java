@@ -5,17 +5,21 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import br.com.feitoamaoapi.infra.entity.AbstractBaseEntity;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "imagem_produto", schema = "FEITO_A_MAO")
 public class ImagemProduto extends AbstractBaseEntity<Long> {
 
@@ -24,12 +28,10 @@ public class ImagemProduto extends AbstractBaseEntity<Long> {
 	@Column(name = "id_imagem_produto")
 	private Long id;
 
-	@ManyToOne
-	@JoinColumn(name = "id_produto", referencedColumnName = "id_produto")
-	private Produto produto;
+	@Column(name = "id_produto", nullable = false)
+	private Long idProduto;
 
-	@ManyToOne
-	@JoinColumn(name = "id_imagem", referencedColumnName = "id_imagem")
-	private Imagem imagem;
+	@Column(name = "id_imagem", nullable = false)
+	private Long idImagem;
 
 }
