@@ -1,4 +1,4 @@
-package br.com.banestes.feitoamao.config;
+package br.com.feitoamaoapi.config;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;

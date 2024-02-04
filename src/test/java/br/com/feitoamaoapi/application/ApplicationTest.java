@@ -1,4 +1,4 @@
-package br.com.banestes.application;
+package br.com.feitoamaoapi.application;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;

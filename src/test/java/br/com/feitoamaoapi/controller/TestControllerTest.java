@@ -1,4 +1,4 @@
-package br.com.banestes.feitoamao.controller;
+package br.com.feitoamaoapi.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
