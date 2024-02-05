@@ -34,9 +34,6 @@ public class Produto extends AbstractBaseEntity<Long> {
 	@Column(name = "id_produto")
 	private Long id;
 
-	@Column(name = "id_vendedor", nullable = false)
-	private Long idVendedor;
-
 	@Column(name = "nome", nullable = false, length = 255)
 	private String nome;
 
@@ -49,11 +46,11 @@ public class Produto extends AbstractBaseEntity<Long> {
 	@Column(name = "estoque_disponivel", nullable = false)
 	private Integer estoqueDisponivel;
 
-	@Column(name = "data_criacao", nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+	@Column(name = "data_criacao", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP", insertable = false)
 	private LocalDateTime dataCriacao;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_vendedor", referencedColumnName = "id_vendedor", insertable = false, updatable = false)
+	@JoinColumn(name = "id_vendedor", referencedColumnName = "id_vendedor")
 	private Vendedor vendedor;
 
 }

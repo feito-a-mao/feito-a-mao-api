@@ -37,7 +37,7 @@ public class Imagem extends AbstractBaseEntity<Long> {
 	@Column(name = "legenda")
 	private String legenda;
 
-	@Column(name = "data_upload", nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+	@Column(name = "data_upload", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP", insertable = false)
 	private LocalDateTime dataUpload;
 
 }

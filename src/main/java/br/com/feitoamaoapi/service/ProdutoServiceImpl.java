@@ -29,6 +29,13 @@ public class ProdutoServiceImpl extends AbstractCrudService<Produto, ProdutoDTO>
 	}
 
 	@Override
+	public ProdutoDTO salvar(ProdutoDTO dto) {
+		Produto entity = produtoRepository.save(ProdutoMapper.fromDTOtoEntity(dto));
+		ProdutoDTO newDTO = ProdutoMapper.fromEntityToDTO(entity);
+		return newDTO;
+	}
+
+	@Override
 	public PaginaDTO<ProdutoDTO> recuperarTodos(ProdutoParameters parameters, Integer offset, Integer limit,
 			String ordenacao) {
 		PaginaDTO<ProdutoDTO> produtos = super.recuperarTodos(parameters, offset, limit, ordenacao);

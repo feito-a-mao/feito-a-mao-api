@@ -29,9 +29,6 @@ public class Vendedor extends AbstractBaseEntity<Long> {
 	@Column(name = "id_vendedor")
 	private Long id;
 
-	@Column(name = "id_usuario", nullable = false)
-	private Long idUsuario;
-
 	@Column(name = "descricao_perfil", columnDefinition = "TEXT")
 	private String descricaoPerfil;
 

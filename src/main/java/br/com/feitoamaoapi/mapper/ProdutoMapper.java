@@ -14,7 +14,6 @@ public class ProdutoMapper {
 
 		return ProdutoDTO.builder()//
 				.id(produto.getId())//
-				.idVendedor(produto.getIdVendedor())//
 				.nome(produto.getNome())//
 				.descricao(produto.getDescricao())//
 				.preco(produto.getPreco())//
@@ -30,7 +29,6 @@ public class ProdutoMapper {
 		}
 
 		return Produto.builder().id(dto.getId()) //
-				.idVendedor(dto.getIdVendedor()) //
 				.nome(dto.getNome()) //
 				.descricao(dto.getDescricao()) //
 				.preco(dto.getPreco()) //

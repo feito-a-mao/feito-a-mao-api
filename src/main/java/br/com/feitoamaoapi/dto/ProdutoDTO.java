@@ -20,8 +20,6 @@ public class ProdutoDTO extends BaseDTO {
 
 	private Long id;
 
-	private Long idVendedor;
-
 	private String nome;
 
 	private String descricao;
