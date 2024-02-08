@@ -1,10 +1,14 @@
 package br.com.feitoamaoapi.service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Service;
 
+import br.com.feitoamaoapi.dto.ImagemDTO;
 import br.com.feitoamaoapi.dto.ProdutoDTO;
 import br.com.feitoamaoapi.dto.ProdutoParameters;
 import br.com.feitoamaoapi.entity.Produto;
@@ -31,7 +35,10 @@ public class ProdutoServiceImpl extends AbstractCrudService<Produto, ProdutoDTO>
 	@Override
 	public ProdutoDTO salvar(ProdutoDTO dto) {
 		Produto entity = produtoRepository.save(ProdutoMapper.fromDTOtoEntity(dto));
+		salvarImagensProduto(entity, dto);
+
 		ProdutoDTO newDTO = ProdutoMapper.fromEntityToDTO(entity);
+		newDTO.setImagens(dto.getImagens());
 		return newDTO;
 	}
 
@@ -43,6 +50,22 @@ public class ProdutoServiceImpl extends AbstractCrudService<Produto, ProdutoDTO>
 		carregarImagensProduto(produtos);
 
 		return produtos;
+	}
+
+	public void salvarImagensProduto(Produto produto, ProdutoDTO dto) {
+		if (dto.getImagens() == null) {
+			return;
+		}
+
+		List<ImagemDTO> listaImagens = dto.getImagens().stream().map(imagem -> {
+			if (imagem.getId() == null) {
+				return imagemProdutoService.salvarImagemProduto(produto, imagem);
+			} else {
+				return imagem;
+			}
+		}).collect(Collectors.toList());
+
+		dto.setImagens(listaImagens);
 	}
 
 	private void carregarImagensProduto(PaginaDTO<ProdutoDTO> produtos) {
